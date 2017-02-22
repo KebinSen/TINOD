@@ -1,0 +1,13 @@
+# Maven
+target/
+.apt_generated/
+
+# IDEA #
+.idea/
+*.iml
+
+# Eclipse #
+.settings/
+.classpath
+.project
+.factorypath

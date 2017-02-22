@@ -1,0 +1,33 @@
+server:
+  port: 8082
+  context-path: null
+logging:
+  level:
+    com.marsforce: D
+druid:
+  url: jdbc:mysql://127.0.0.1:3306/tinod
+  username: tinod
+  password: tinod
+  initial-size: 1
+  min-idle: 1
+  max-active: 20
+  test-on-borrow: true
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+mybatis:
+  type-aliases-package: com.marsforce.entity
+  mapper-locations: classpath:mapper/*.xml
+mapper:
+  mappers:
+  - com.marsforce.common.MyMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
